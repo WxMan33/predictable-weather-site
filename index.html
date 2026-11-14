@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090f19">
+  <meta name="description" content="something new is on the horizon.">
+  <title>predictable weather.</title>
+  <style>
+    :root { color-scheme: dark; font-family: 'Avenir Next', Avenir, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; margin: 0; }
+    body { background: #090f19; color: #f5f7fa; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: -35%; z-index: -1; pointer-events: none; background: radial-gradient(ellipse 34% 29% at 48% 48%, rgba(35,84,118,.22), transparent 75%), radial-gradient(ellipse 27% 24% at 75% 28%, rgba(22,54,91,.12), transparent 80%); animation: drift 23s ease-in-out infinite alternate; }
+    main { min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 3rem 1.5rem; }
+    .stack { width: min(100%, 880px); text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .eyebrow { font-size: clamp(.78rem, 1.35vw, .92rem); letter-spacing: .13em; font-weight: 500; color: #9bbbd0; margin: 0 0 clamp(2.5rem, 7vh, 5rem); }
+    h1 { font-size: clamp(2.6rem, 7vw, 5.9rem); font-weight: 500; letter-spacing: -.055em; line-height: 1.08; margin: 0; text-wrap: balance; }
+    .rule { width: 48px; height: 1px; background: #79afcb; margin: clamp(2.6rem, 7vh, 5rem) 0 clamp(2.3rem, 5vh, 3.4rem); }
+    .tagline { font-size: clamp(1.08rem, 2.35vw, 1.65rem); line-height: 1.65; font-style: italic; font-weight: 400; letter-spacing: -.018em; color: #cbd6e2; margin: 0; text-wrap: balance; }
+    @keyframes drift { from { transform: translate(-2%, -1%) scale(1); } to { transform: translate(3%, 2%) scale(1.08); } }
+    @media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="stack">
+      <p class="eyebrow">something new is on the horizon.</p>
+      <h1>predictable weather.</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="tagline">weather is complicated.<br>understanding it shouldn't be.</p>
+    </div>
+  </main>
+</body>
+</html>
